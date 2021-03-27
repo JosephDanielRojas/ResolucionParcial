@@ -10,7 +10,13 @@ namespace RecuperacionDaniel.Controllers
     public class AddController : ApiController
     {
         [HttpGet]
+        [HttpPost]
         public int Sumar(int a, int b)
+        {
+            return a + b;
+        }
+        [HttpPost]
+        public int Sumar2([FromBody]int a, [FromBody]int b)
         {
             return a + b;
         }
